@@ -1,7 +1,7 @@
 {
   "name": "generator-smush",
-  "version": "1.0.1",
-  "description": "generator-webapp minus gulp, plus grunt-responsive-images",
+  "version": "1.0.2",
+  "description": "generator-webapp minus gulp and everything else, plus grunt-responsive-images",
   "license": "BSD-2-Clause",
   "repository": "jeffreysbrother/generator-smush",
   "author": "The Yeoman Team and James Cool",
@@ -29,12 +29,7 @@
   "dependencies": {
     "chalk": "^1.0.0",
     "mkdirp": "^0.5.1",
-    "underscore.string": "^3.1.1",
-    "yeoman-assert": "^2.1.1",
     "yeoman-generator": "^0.22.5",
     "yosay": "^1.0.0"
-  },
-  "devDependencies": {
-    "yeoman-test": "^1.1.0"
   }
 }

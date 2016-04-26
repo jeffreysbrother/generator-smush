@@ -14,13 +14,13 @@ module.exports = function(grunt) {
           options: {
             sizes: [{
               width: '100%',
-              quality: 68
+              quality: 60
             }]
           },
           files: [{
             expand: true,
             src: ['images/*.{jpg,jpeg,JPG,JPEG,gif,GIF,png,PNG}'],
-            custom_dest: 'smush-{%= width %}/'
+            custom_dest: 'image-smush-{%= width %}/'
           }]
         }
       }
