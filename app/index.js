@@ -6,16 +6,9 @@ var mkdirp = require('mkdirp');
 var _s = require('underscore.string');
 
 module.exports = generators.Base.extend({
+  
   constructor: function () {
-
     generators.Base.apply(this, arguments);
-
-    this.option('babel', {
-      desc: 'Use Babel',
-      type: Boolean,
-      defaults: false
-    });
-
   },
 
   initializing: function () {
@@ -23,30 +16,7 @@ module.exports = generators.Base.extend({
   },
 
   prompting: function () {
-    var done = this.async();
-
-    this.log(yosay('You wanna make a damn email? Well, that\'s SWELL.'));
-
-    var prompts = [{
-      type: 'confirm',
-      name: 'includeAddress',
-      message: 'Include an address section below the footer?',
-      default: true
-    }];
-
-    this.prompt(prompts, function (answers) {
-      var features = answers.features;
-
-      function hasFeature(feat) {
-        return features && features.indexOf(feat) !== -1;
-      };
-
-      // manually deal with the response, get back and store the results.
-      // we change a bit this way of doing to automatically do this in the self.prompt() method.
-      this.includeAddress = answers.includeAddress;
-
-      done();
-    }.bind(this));
+    this.log(yosay('Get on the train to Smushville!'));
   },
 
   writing: {
