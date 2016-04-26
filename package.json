@@ -1,7 +1,7 @@
 {
   "name": "generator-smush",
-  "version": "1.0.8",
-  "description": "generator webapp minus gulp, plus grunt-responsive-images",
+  "version": "1.0.0",
+  "description": "generator-webapp minus gulp, plus grunt-responsive-images",
   "license": "BSD-2-Clause",
   "repository": "jeffreysbrother/generator-ninthlink-email",
   "author": "The Yeoman Team and James Cool",
@@ -15,11 +15,13 @@
   ],
   "keywords": [
     "yeoman-generator",
-    "generator-ninthlink-email",
+    "generator-smush",
     "ninthlink",
     "james cool",
-    "inline-css",
-    "gulp"
+    "grunt-responsive-images",
+    "image minification",
+    "compression",
+    "grunt"
   ],
   "dependencies": {
     "chalk": "^1.0.0",
