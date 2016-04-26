@@ -1,7 +1,7 @@
 {
-  "name": "generator-ninthlink-email",
+  "name": "generator-smush",
   "version": "1.0.8",
-  "description": "a lean version of generator-webapp built for HTML emails",
+  "description": "generator webapp minus gulp and everything else",
   "license": "BSD-2-Clause",
   "repository": "jeffreysbrother/generator-ninthlink-email",
   "author": "The Yeoman Team and James Cool",

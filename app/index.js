@@ -52,8 +52,8 @@ module.exports = generators.Base.extend({
   writing: {
     gulpfile: function () {
       this.fs.copyTpl(
-        this.templatePath('gulpfile.babel.js'),
-        this.destinationPath('gulpfile.babel.js'),
+        this.templatePath('Gruntfile.js'),
+        this.destinationPath('Gruntfile.js'),
         {
           date: (new Date).toISOString().split('T')[0],
           name: this.pkg.name,
@@ -97,20 +97,20 @@ module.exports = generators.Base.extend({
       );
     },
 
-    html: function () {
-
-      this.fs.copyTpl(
-        this.templatePath('index.html'),
-        this.destinationPath('app/index.html'),
-        {
-          appname: this.appname,
-          includeAddress: this.includeAddress
-        }
-      );
-    },
+    // html: function () {
+    // 
+    //   this.fs.copyTpl(
+    //     this.templatePath('index.html'),
+    //     this.destinationPath('app/index.html'),
+    //     {
+    //       appname: this.appname,
+    //       includeAddress: this.includeAddress
+    //     }
+    //   );
+    // },
     
     misc: function () {
-      mkdirp('app/images');
+      mkdirp('images');
     }
 
   },
