@@ -1,7 +1,7 @@
 {
   "name": "generator-smush",
   "version": "1.0.8",
-  "description": "generator webapp minus gulp and everything else",
+  "description": "generator webapp minus gulp, plus grunt-responsive-images",
   "license": "BSD-2-Clause",
   "repository": "jeffreysbrother/generator-ninthlink-email",
   "author": "The Yeoman Team and James Cool",
