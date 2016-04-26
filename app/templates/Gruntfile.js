@@ -5,6 +5,9 @@ module.exports = function(grunt) {
 
     // this task handles image compression and resizing
     // required: GraphicsMagick installed
+    
+    // WIDTH property must be a string if it includes % or px suffix
+    // QUALITY property must be an integer between 1 and 100  
     responsive_images: {
         myTask: {
           options: {
@@ -12,8 +15,8 @@ module.exports = function(grunt) {
               // width: 2100,
               // quality: 61
             // },{
-              width: 300,
-              quality: 40
+              width: "l00%",
+              quality: 68
             // },{
             //   width: 700,
             //   quality: 40
@@ -22,7 +25,7 @@ module.exports = function(grunt) {
           files: [{
             expand: true,
             src: ['images/*.{jpg,jpeg,JPG,JPEG,gif,GIF,png,PNG}'],
-            custom_dest: 'images{%= width %}/'
+            custom_dest: 'smush{%= width %}/'
           }]
         }
       }

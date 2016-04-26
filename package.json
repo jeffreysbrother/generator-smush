@@ -21,7 +21,10 @@
     "grunt-responsive-images",
     "image minification",
     "compression",
-    "grunt"
+    "grunt",
+    "fast",
+    "minimal",
+    "GraphicsMagick"
   ],
   "dependencies": {
     "chalk": "^1.0.0",
