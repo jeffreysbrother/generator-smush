@@ -41,12 +41,6 @@ module.exports = generators.Base.extend({
         }
       );
     },
-
-    git: function () {
-      this.fs.copy(
-        this.templatePath('gitignore'),
-        this.destinationPath('.gitignore'));
-    },
     
     misc: function () {
       mkdirp('images');

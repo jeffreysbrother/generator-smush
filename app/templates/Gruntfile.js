@@ -20,7 +20,7 @@ module.exports = function(grunt) {
           files: [{
             expand: true,
             src: ['images/*.{jpg,jpeg,JPG,JPEG,gif,GIF,png,PNG}'],
-            custom_dest: 'image-smush-{%= width %}/'
+            custom_dest: 'smush-{%= width %}/'
           }]
         }
       }
