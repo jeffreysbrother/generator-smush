@@ -12,6 +12,7 @@ Please keep in mind that since the compression offered by this particular grunt 
 
 ## Getting Started
 
+- Install [GraphicsMagick](https://sourceforge.net/projects/graphicsmagick/files/graphicsmagick/)
 - Install dependencies: `npm install --global yo grunt-cli`
 - Install the generator: `npm install --global generator-smush`
 - Run `yo smush` within a new project directory to generate all necessary files
