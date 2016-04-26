@@ -19,26 +19,17 @@ module.exports = generators.Base.extend({
   },
 
   writing: {
-    gulpfile: function () {
+    gruntfile: function () {
       this.fs.copyTpl(
         this.templatePath('Gruntfile.js'),
-        this.destinationPath('Gruntfile.js'),
-        {
-          date: (new Date).toISOString().split('T')[0],
-          name: this.pkg.name,
-          version: this.pkg.version,
-          includeBabel: this.options['babel']
-        }
+        this.destinationPath('Gruntfile.js')
       );
     },
 
     packageJSON: function () {
       this.fs.copyTpl(
         this.templatePath('_package.json'),
-        this.destinationPath('package.json'),
-        {
-          includeBabel: this.options['babel']
-        }
+        this.destinationPath('package.json')
       );
     },
     
