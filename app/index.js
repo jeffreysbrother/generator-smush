@@ -73,41 +73,11 @@ module.exports = generators.Base.extend({
       );
     },
 
-    babel: function () {
-      this.fs.copy(
-        this.templatePath('babelrc'),
-        this.destinationPath('.babelrc')
-      );
-    },
-
     git: function () {
       this.fs.copy(
         this.templatePath('gitignore'),
         this.destinationPath('.gitignore'));
-
-      this.fs.copy(
-        this.templatePath('gitattributes'),
-        this.destinationPath('.gitattributes'));
     },
-
-    editorConfig: function () {
-      this.fs.copy(
-        this.templatePath('editorconfig'),
-        this.destinationPath('.editorconfig')
-      );
-    },
-
-    // html: function () {
-    // 
-    //   this.fs.copyTpl(
-    //     this.templatePath('index.html'),
-    //     this.destinationPath('app/index.html'),
-    //     {
-    //       appname: this.appname,
-    //       includeAddress: this.includeAddress
-    //     }
-    //   );
-    // },
     
     misc: function () {
       mkdirp('images');
