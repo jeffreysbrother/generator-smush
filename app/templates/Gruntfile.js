@@ -7,29 +7,20 @@ module.exports = function(grunt) {
     // required: GraphicsMagick installed
     
     // WIDTH property must be a string if it includes % or px suffix
-    // QUALITY property must be an integer between 1 and 100  
+    // QUALITY property must be an integer between 1 and 100
+    // can specify multiple width/quality pairs by passing objects to SIZES
     responsive_images: {
         myTask: {
           options: {
-            sizes: [
-              {
-                width: "l00%",
-                quality: 64
-              }
-              // {
-              //   width: 2100,
-              //   quality: 61
-              // },
-              // {
-              //   width: 700,
-              //   quality: 40
-              // }
-            ]
+            sizes: [{
+              width: '100%',
+              quality: 68
+            }]
           },
           files: [{
             expand: true,
             src: ['images/*.{jpg,jpeg,JPG,JPEG,gif,GIF,png,PNG}'],
-            custom_dest: 'smush{%= width %}/'
+            custom_dest: 'smush-{%= width %}/'
           }]
         }
       }
