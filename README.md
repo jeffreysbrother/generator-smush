@@ -1,4 +1,4 @@
-# Email generator
+# Minify Images
 
 > [Yeoman](http://yeoman.io) generator for minifying images using [grunt](http://gruntjs.com/)
 
