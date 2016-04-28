@@ -33,6 +33,16 @@ module.exports = generators.Base.extend({
       );
     },
     
+    // if the bower.json file is not created, Yeoman will complain
+    bower: function () {
+      var bowerJson = {
+        name: "Smushville",
+        private: true,
+        dependencies: {}
+      };
+      this.fs.writeJSON('bower.json', bowerJson);
+    },
+    
     misc: function () {
       mkdirp('images');
     }
@@ -43,5 +53,30 @@ module.exports = generators.Base.extend({
     this.installDependencies({
       skipInstall: this.options['skip-install']
     });
+  },
+  
+  end: function () {
+  var bowerJson = this.fs.readJSON(this.destinationPath('bower.json'));
+  var howToInstall =
+    '\nAfter running ' +
+    chalk.yellow.bold('npm install & bower install') +
+    ', inject your' +
+    '\nfront end dependencies by running ' +
+    chalk.yellow.bold('gulp wiredep') +
+    '.';
+
+  if (this.options['skip-install']) {
+    this.log(howToInstall);
+    return;
   }
+
+  // wire Bower packages to .html
+  wiredep({
+    bowerJson: bowerJson,
+    directory: 'bower_components',
+    exclude: ['bootstrap-sass', 'bootstrap.js'],
+    ignorePath: /^(\.\.\/)*\.\./,
+    src: 'app/index.html'
+  });
+}
 });
