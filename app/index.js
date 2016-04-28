@@ -36,7 +36,7 @@ module.exports = generators.Base.extend({
     // if the bower.json file is not created, Yeoman will complain
     bower: function () {
       var bowerJson = {
-        name: "Smushville",
+        name: 'smushville',
         private: true,
         dependencies: {}
       };
