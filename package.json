@@ -1,6 +1,6 @@
 {
   "name": "generator-smush",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "generator-webapp minus gulp and everything else, plus grunt-responsive-images",
   "license": "BSD-2-Clause",
   "repository": "jeffreysbrother/generator-smush",
